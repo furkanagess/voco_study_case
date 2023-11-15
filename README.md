@@ -1,16 +1,9 @@
-# voco_study_case
+# Voco Study Case
 
-A new Flutter project.
+![1](https://github.com/furkanagess/voco_study_case/assets/92018394/30126185-bd42-40ab-b0de-bab26215f80a)
 
-## Getting Started
+![2](https://github.com/furkanagess/voco_study_case/assets/92018394/05173ab8-ae50-4452-b3cb-8e96d3cfebb6)
 
-This project is a starting point for a Flutter application.
+![3](https://github.com/furkanagess/voco_study_case/assets/92018394/3e38ac7e-f056-4995-8ce3-058444a3ea0d)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![4](https://github.com/furkanagess/voco_study_case/assets/92018394/2ac8f96e-d21c-4ef1-ad4b-968f14b1d7d9)
