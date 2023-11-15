@@ -9,6 +9,8 @@ import 'package:voco_study_case/product/constants/app_colors.dart';
 import 'package:voco_study_case/product/constants/app_strings.dart';
 import 'package:voco_study_case/product/extension/context_extension.dart';
 import 'package:voco_study_case/product/widgets/app_scaffold.dart';
+import 'package:voco_study_case/product/widgets/email_textfield.dart';
+import 'package:voco_study_case/product/widgets/password_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -46,47 +48,6 @@ class LoginPage extends StatelessWidget {
   SizedBox divider(BuildContext context) {
     return SizedBox(
       height: context.dynamicHeight(0.02),
-    );
-  }
-}
-
-class EmailTextfield extends StatelessWidget {
-  const EmailTextfield({
-    super.key,
-    required this.emailController,
-  });
-
-  final TextEditingController emailController;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: emailController,
-      decoration: const InputDecoration(
-        labelText: AppStrings.email,
-        border: OutlineInputBorder(),
-      ),
-    );
-  }
-}
-
-class PasswordTextfield extends StatelessWidget {
-  const PasswordTextfield({
-    super.key,
-    required this.passwordController,
-  });
-
-  final TextEditingController passwordController;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: passwordController,
-      decoration: const InputDecoration(
-        labelText: AppStrings.password,
-        border: OutlineInputBorder(),
-      ),
-      obscureText: true,
     );
   }
 }

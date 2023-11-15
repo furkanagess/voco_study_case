@@ -23,7 +23,7 @@ class ParticipantListPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: context.paddingLow,
+          padding: context.paddingNormal,
           child: Column(
             children: [
               Expanded(
