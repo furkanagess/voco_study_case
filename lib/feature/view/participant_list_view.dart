@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:voco_study_case/feature/controller/participant_provider.dart';
+import 'package:voco_study_case/feature/controller/participant_controller.dart';
 import 'package:voco_study_case/product/constants/app_colors.dart';
 import 'package:voco_study_case/product/constants/app_strings.dart';
 import 'package:voco_study_case/product/extension/context_extension.dart';
 import 'package:voco_study_case/product/widgets/app_scaffold.dart';
 import 'package:voco_study_case/product/widgets/logout_button.dart';
 
-class ParticipantListPage extends StatelessWidget {
-  const ParticipantListPage({super.key});
+class ParticipantListView extends StatelessWidget {
+  const ParticipantListView({super.key});
 
   @override
   Widget build(BuildContext context) {

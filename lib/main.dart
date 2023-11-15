@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:voco_study_case/feature/controller/auth_controller.dart';
-import 'package:voco_study_case/feature/controller/participant_provider.dart';
-import 'package:voco_study_case/feature/service/connectivity_service.dart';
+import 'package:voco_study_case/feature/controller/participant_controller.dart';
+import 'package:voco_study_case/feature/service/network_service.dart';
 import 'package:voco_study_case/feature/view/login_view.dart';
 import 'package:voco_study_case/feature/view/participant_list_view.dart';
 import 'package:voco_study_case/product/constants/app_strings.dart';
@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       home: authController.token != null
-          ? const ParticipantListPage()
-          : LoginPage(),
+          ? const ParticipantListView()
+          : LoginView(),
     );
   }
 }

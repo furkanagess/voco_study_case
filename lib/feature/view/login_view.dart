@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:voco_study_case/feature/controller/auth_controller.dart';
-import 'package:voco_study_case/feature/controller/participant_provider.dart';
+import 'package:voco_study_case/feature/controller/participant_controller.dart';
 import 'package:voco_study_case/feature/view/participant_list_view.dart';
 import 'package:voco_study_case/product/constants/app_colors.dart';
 import 'package:voco_study_case/product/constants/app_strings.dart';
@@ -12,11 +12,11 @@ import 'package:voco_study_case/product/widgets/app_scaffold.dart';
 import 'package:voco_study_case/product/widgets/email_textfield.dart';
 import 'package:voco_study_case/product/widgets/password_textfield.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginView extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  LoginPage({super.key});
+  LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class LoginButton extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const ParticipantListPage(),
+                  builder: (context) => const ParticipantListView(),
                 ),
               );
             }
