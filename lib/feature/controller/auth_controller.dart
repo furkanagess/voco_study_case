@@ -2,8 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
-class AuthProvider with ChangeNotifier {
+class AuthController with ChangeNotifier {
   String? _token;
 
   String? get token => _token;
@@ -18,14 +19,28 @@ class AuthProvider with ChangeNotifier {
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = jsonDecode(response.body);
       _token = data['token'];
+      await saveTokenToLocal(_token!);
       notifyListeners();
     } else {
       throw Exception('Login failed');
     }
   }
 
-  void logout() {
+  Future<void> saveTokenToLocal(String token) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('token', token);
+  }
+
+  Future<void> loadTokenFromLocal() async {
+    final prefs = await SharedPreferences.getInstance();
+    _token = prefs.getString('token');
+    notifyListeners();
+  }
+
+  void logout() async {
     _token = null;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('token');
     notifyListeners();
   }
 }

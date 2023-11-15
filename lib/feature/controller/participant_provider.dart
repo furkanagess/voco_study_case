@@ -2,10 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:voco_study_case/feature/model/participant.dart';
-
 import 'package:http/http.dart' as http;
 
-class ParticipantProvider with ChangeNotifier {
+class ParticipantController with ChangeNotifier {
   List<Participant> _participants = [];
 
   List<Participant> get participants => _participants;

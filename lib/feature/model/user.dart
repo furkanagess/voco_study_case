@@ -1,4 +1,4 @@
-class User {
+final class User {
   late String email;
   late String password;
 
